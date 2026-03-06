@@ -218,6 +218,15 @@ export default function HazardForm({ onCancel, onSubmit }: HazardFormProps) {
                   type="datetime-local"
                 />
               </div>
+              <div className="md:col-span-2 space-y-1.5">
+                <label className="text-sm font-bold text-slate-700 flex items-center gap-1">
+                  结果说明 <span className="text-red-500">*</span>
+                </label>
+                <textarea 
+                  className="w-full p-4 rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-[#135bec]/10 focus:border-[#135bec] outline-none transition-all text-sm min-h-[80px]" 
+                  placeholder="请详细说明整改后的实际效果及具体完成情况..."
+                ></textarea>
+              </div>
             </div>
           </section>
 

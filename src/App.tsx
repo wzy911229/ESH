@@ -5,8 +5,10 @@ import Dashboard from './pages/Dashboard';
 import HazardList from './pages/HazardList';
 import HazardForm from './pages/HazardForm';
 import HazardDetail from './pages/HazardDetail';
+import NotificationCenter from './pages/NotificationCenter';
 import { Page, Hazard } from './types';
 import { motion, AnimatePresence } from 'motion/react';
+import { Toaster } from 'sonner';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('dashboard');
@@ -32,6 +34,8 @@ export default function App() {
         return <Dashboard />;
       case 'list':
         return <HazardList onAdd={handleAddHazard} onView={handleViewHazard} />;
+      case 'notifications':
+        return <NotificationCenter />;
       case 'form':
         return <HazardForm onCancel={() => setCurrentPage('list')} onSubmit={() => setCurrentPage('list')} />;
       case 'detail':
@@ -49,6 +53,7 @@ export default function App() {
     switch (currentPage) {
       case 'dashboard': return 'ESH数字化管理系统仪表盘';
       case 'list': return '隐患管理列表';
+      case 'notifications': return '通知发布中心';
       case 'form': return '新增隐患单据';
       case 'detail': return '隐患详情查看';
       default: return 'ESH 管理系统';
@@ -78,6 +83,7 @@ export default function App() {
 
   return (
     <div className="flex h-screen w-full bg-white overflow-hidden font-sans">
+      <Toaster position="top-right" richColors />
       <Sidebar currentPage={currentPage} onPageChange={handlePageChange} />
       
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">

@@ -20,4 +20,4 @@ export interface Hazard {
   description: string;
 }
 
-export type Page = 'dashboard' | 'list' | 'form' | 'detail';
+export type Page = 'dashboard' | 'list' | 'form' | 'detail' | 'notifications' | 'reports';
