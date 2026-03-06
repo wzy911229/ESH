@@ -304,8 +304,11 @@ function FormSelect({ label, options, required }: any) {
       <label className="text-sm font-bold text-slate-700 flex items-center gap-1">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
-      <select className="w-full h-11 px-4 rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-[#135bec]/10 focus:border-[#135bec] outline-none transition-all text-sm">
-        <option disabled selected value="">请选择{label}</option>
+      <select 
+        defaultValue=""
+        className="w-full h-11 px-4 rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-[#135bec]/10 focus:border-[#135bec] outline-none transition-all text-sm"
+      >
+        <option disabled value="">请选择{label}</option>
         {options.map((opt: string) => <option key={opt}>{opt}</option>)}
       </select>
     </div>
