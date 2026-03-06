@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, AlertTriangle, FileText, HelpCircle, Shield, BellRing, BarChart3 } from 'lucide-react';
+import { LayoutDashboard, AlertTriangle, HelpCircle, Shield } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -14,10 +14,8 @@ interface SidebarProps {
 
 export default function Sidebar({ currentPage, onPageChange }: SidebarProps) {
   const menuItems = [
-    { id: 'dashboard', label: '首页', icon: LayoutDashboard },
     { id: 'list', label: '隐患管理', icon: AlertTriangle },
-    { id: 'notifications', label: '通知发布', icon: BellRing },
-    { id: 'reports', label: '数据报表', icon: BarChart3 },
+    { id: 'dashboard', label: '数据报表', icon: LayoutDashboard },
   ];
 
   return (

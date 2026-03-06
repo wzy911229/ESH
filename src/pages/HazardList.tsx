@@ -70,7 +70,7 @@ export default function HazardList({ onAdd, onView }: HazardListProps) {
     <div className="flex-1 overflow-y-auto p-8 space-y-6 bg-slate-50">
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2 text-sm text-slate-500 mb-1">
-          <span>首页</span>
+          <span>数据报表</span>
           <ChevronRight className="w-4 h-4" />
           <span className="text-slate-900">隐患管理</span>
         </div>
